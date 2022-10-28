@@ -1,24 +1,39 @@
 <div>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'GoodGamingShop') }}
+                <strong>GoodGamingShopp</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" href="{{ route('home') }}">Home</a>
-                  <a class="nav-link" href="#">Features</a>
-                  <a class="nav-link" href="#">Pricing</a>
-                  <a class="nav-link disabled">Disabled</a>
-                </div>
-            </div>
+                <a class="nav-link" href="{{ route('home') }}">Home</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Catalog
+                    </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Headset</a></li>
+                    <li><a class="dropdown-item" href="#">Mouse</a></li>
+                    <li><a class="dropdown-item" href="#">Keyboard</a></li>
+                    <li><a class="dropdown-item" href="{{ route('products')}}">All Categories</a></li>
+                </ul>
+            </li>    
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Others
+                </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Shopping Cart</a></li>
+                <li><a class="dropdown-item" href="#">Transaction History</a></li>
+            </ul>
+        </li>    
+    </div>
+</div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
@@ -42,8 +57,8 @@
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                                    onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

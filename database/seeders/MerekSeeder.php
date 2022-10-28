@@ -17,22 +17,22 @@ class MerekSeeder extends Seeder
     {
         DB::table('mereks')->insert([
             'nama' => 'Rexus',
-            'gambar' => 'rexus.png',
+            'gambar' => 'Rexuz.png',
         ]);
 
         DB::table('mereks')->insert([
             'nama' => 'Razer',
-            'gambar' => 'razer.png',
+            'gambar' => 'razerr.png',
         ]);
 
         DB::table('mereks')->insert([
             'nama' => 'Fantech',
-            'gambar' => 'fantech.png',
+            'gambar' => 'Fantech.png',
         ]);
 
         DB::table('mereks')->insert([
-            'nama' => 'Asus',
-            'gambar' => 'asus.png',
+            'nama' => 'ROG',
+            'gambar' => 'Rog.png',
         ]);
     }
 }

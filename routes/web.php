@@ -21,3 +21,8 @@ Auth::routes();
 
 //Route::livewire('/', 'home')->name('home');
 Route::get('/', \App\Http\Livewire\Home::class)->name('home');
+
+//Route::livewire('/products','product-index')->name("product"); -> old ways
+
+// Route untuk productindex
+Route::get('/products', App\Http\Livewire\ProductIndex::class)->name('products');
