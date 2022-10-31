@@ -15,10 +15,13 @@
                         Catalog
                     </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Headset</a></li>
-                    <li><a class="dropdown-item" href="#">Mouse</a></li>
-                    <li><a class="dropdown-item" href="#">Keyboard</a></li>
-                    <li><a class="dropdown-item" href="{{ route('products')}}">All Categories</a></li>
+                    @foreach ($categories as $category)
+                    <a class="dropdown-item" href="{{ route('products.catalog', $category->id) }}">{{ $category->nama }}</a>
+                    @endforeach
+                    {{-- <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset fa-fw fa-fade" style="--fa-animation-duration: 2s"></i> Headset</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-computer-mouse fa-fw fa-fade" style="--fa-animation-duration: 2s"></i> Mouse</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-keyboard fa-fw fa-fade" style="--fa-animation-duration: 2s"></i> Keyboard</a></li> --}}
+                    <li><a class="dropdown-item" href="{{ route('products')}}"><i class="fa-solid fa-list fa-fw fa-fade" style="--fa-animation-duration: 2s"></i> All Categories</a></li>
                 </ul>
             </li>    
             <li class="nav-item dropdown">

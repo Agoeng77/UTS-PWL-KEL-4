@@ -44,7 +44,8 @@
 
 {{-- Best Products  --}}
 <section class ="best-product mt-5 mb-5">
-    <h3 style="text-align:center"><strong>Our Best Products</strong></h3>
+    <h3 style="text-align:center"><strong>Our Best Products</strong>
+    <a href="{{ route('products') }}" class="btn btn-dark float-right"><i class="fa-regular fa-eye"></i> Lihat Semua </a></h3>
     <div class="row mt-4">
         @foreach ($products as $product)
         <div class="col-md-3">
@@ -59,7 +60,7 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-12">
-                            <a href="#"class="btn btn-dark btn-block">Product Details</a>
+                            <a href="{{ route('products.detail', $product->id) }}"class="btn btn-dark btn-block"><i class="fa-regular fa-eye"></i>Product Details</a>
                         </div>
                     </div>
                 </div>

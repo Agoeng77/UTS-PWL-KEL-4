@@ -12,7 +12,8 @@ class ProductIndex extends Component
     {
         $products = Product::all();
         return view('livewire.product-index',[
-            'products' => $products
+            'products' => $products,
+            'title' => 'All Products'
         ]);
     }
 }

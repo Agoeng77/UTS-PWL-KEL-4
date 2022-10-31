@@ -26,3 +26,9 @@ Route::get('/', \App\Http\Livewire\Home::class)->name('home');
 
 // Route untuk productindex
 Route::get('/products', App\Http\Livewire\ProductIndex::class)->name('products');
+
+// Route untuk productcatalog
+Route::get('/products/catalog/{categoryId}', App\Http\Livewire\ProductCatalog::class)->name('products.catalog');
+
+// route untuk productdetail
+Route::get('/products/{id}', App\Http\Livewire\ProductDetail::class)->name('products.detail');

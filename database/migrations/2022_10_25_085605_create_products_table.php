@@ -18,10 +18,9 @@ return new class extends Migration
             $table->string('nama');
             $table->integer('harga')->default(2500000);
             $table->boolean('is_ready')->default(true);
-            $table->string('jenis');
             $table->float('berat')->default(1);
             $table->string('gambar');
-            
+            $table->integer('category_id');
             $table->integer('merek_id');
             $table->timestamps();
         });

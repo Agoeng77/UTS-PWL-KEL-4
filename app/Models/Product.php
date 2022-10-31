@@ -12,6 +12,11 @@ class Product extends Model
         return $this->belongsTo(Merek::class, 'merek_id', 'id');
     }
 
+    public function category()
+    {
+        return $this->belongsTo(category::class, 'category_id', 'id');
+    }
+
     public function pesanan_details()
     {
         return $this->hasMany(PesananDetail::class, 'product_id', 'id');

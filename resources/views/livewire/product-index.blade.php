@@ -7,7 +7,7 @@
         <div class="col">
         </div>
     </div>
-    <h2>All Products</h2>
+    <h2>{{ $title }}</h2>
     <section class ="best-product mt-5 mb-5">
         <h3 style="text-align:center"><strong>All Variations</strong></h3>
         <div class="row mt-4">
@@ -24,8 +24,7 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col-md-12">
-                                <a href="#"class="btn btn-dark btn-block">Product Details</a>
-                            </div>
+                            <a href="{{ route('products.detail', $product->id) }}"class="btn btn-dark btn-block"><i class="fa-regular fa-eye"></i>Product Details</a>                            </div>
                         </div>
                     </div>
                 </div>
